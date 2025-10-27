@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Phantom Trade Engine — Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>📊 Phantom Trade Engine</h1>
+    <div id="meta">
+      <span id="portfolioVal">Portfolio: —</span>
+      <span id="goalProg">Goal: $15,000</span>
+      <span id="lastUpdated">Updated: —</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Daily Portfolio</h2>
+      <canvas id="portfolioChart" height="160"></canvas>
+    </section>
+
+    <section class="card">
+      <h2>Recent Trades</h2>
+      <div class="tableWrap">
+        <table id="tradesTable">
+          <thead>
+            <tr>
+              <th>Date</th><th>Symbol</th><th>Side</th><th>Qty</th><th>Entry</th><th>Exit</th><th>P/L</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small>PhantomTradeEngine · GitHub Pages</small>
+  </footer>
+
+  <script>
+    const CONFIG = {
+      OWNER: "Barrytrading",
+      REPO: "PhantomTradeEngine",
+      BRANCH: "main",
+      GOAL: 15000,
+      FILES: {
+        portfolio: "data/portfolio_value.csv",
+        trades: "data/trades_log.csv"
+      }
+    };
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>
