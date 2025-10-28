@@ -1,0 +1,20 @@
+:root { --pad: 14px; }
+* { box-sizing: border-box; }
+html, body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:#0f1115; color:#e9eef7; }
+header { padding: var(--pad); position: sticky; top: 0; background: #0f1115; border-bottom: 1px solid #242737; z-index: 5; }
+h1 { margin: 0 0 6px 0; font-size: 20px; }
+#meta { display:flex; gap:10px; flex-wrap: wrap; color:#b7c0d8; font-size:14px; }
+main { padding: var(--pad); display: grid; gap: var(--pad); }
+.card { background: #151827; border: 1px solid #242737; border-radius: 10px; padding: var(--pad); }
+h2 { margin: 0 0 10px 0; font-size: 16px; color:#cfe1ff; }
+.tableWrap { overflow-x:auto; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { padding: 8px; border-bottom: 1px solid #242737; white-space: nowrap; }
+th { text-align: left; color:#9db4ff; }
+td.pl-pos { color: #1bc47d; }
+td.pl-neg { color: #ff6b6b; }
+footer { padding: 30px var(--pad); text-align: center; color:#9aa3b2; }
+@media (min-width: 920px) {
+  main { grid-template-columns: 1fr 1fr; }
+  .card:nth-child(1) { grid-column: 1 / -1; }
+}
